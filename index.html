@@ -55,10 +55,15 @@ display: inline;
 width: 400px;
 }
 
-#prizePointer {
+/* #prizePointer {
     position: absolute;
     left: 48.4%;
     top: 10px;
+    z-index: 999;
+} */
+.pc{
+  position: inherit;
+    margin-bottom: -60px;
     z-index: 999;
 }
 
@@ -70,12 +75,12 @@ width: 400px;
   width: 350px;
   }
 
-  #prizePointer {
+  /* #prizePointer {
   position: absolute;
   left: 43.4%;
   top: 10px;
    z-index: 999;
-  }
+  } */
 }
 
 @media only screen and (min-width: 320px) and (max-width:320px){
@@ -86,15 +91,15 @@ width: 400px;
   width: 320px;
   }
 
-  #prizePointer {
+  /* #prizePointer {
   position: absolute;
   left: 42%;
   top: 5px;
    z-index: 999;
-  }
+  } */
 }
 
-@media only screen and (min-width: 375px) and (max-width:400px){
+/* @media only screen and (min-width: 375px) and (max-width:400px){
   #prizePointer {
   position: absolute;
   left: 43.4%;
@@ -155,7 +160,7 @@ width: 400px;
   top: 10px;
    z-index: 999;
   }
-}
+} */
 
   /* #canvas {
       z-index: 1;
@@ -164,13 +169,13 @@ width: 400px;
   } */
 
 
-@media only screen and (min-width: 812px) and (max-width: 900px){
+/* @media only screen and (min-width: 812px) and (max-width: 900px){
   #prizePointer {
   position: absolute;
   left: 47%;
   top: 10px;
    z-index: 999;
-  }
+  } */
 
   /* #canvas {
       z-index: 1;
@@ -178,7 +183,7 @@ width: 400px;
   width:100%;
   } */
 
-}
+/* } */
 
 .rbstyle{
   color: #fed136;
@@ -494,14 +499,16 @@ width: 400px;
           </div>
         </section>
 
-          <div id="canvasContainer">
-            <canvas id='canvas' width='400' height='400'       data-responsiveMinWidth="180"
-           data-responsiveScaleHeight="true"
-           data-responsiveMargin="50">
-
-                Canvas not supported, use another browser.
-            </canvas>
+        <div id="canvasContainer">
+          <div class="pc">
             <img id="prizePointer" src="Asset 12.png" height="60" width="" alt="V"/>
+          </div>
+          <canvas id='canvas' width='400' height='400'       data-responsiveMinWidth="180"
+         data-responsiveScaleHeight="true"
+         data-responsiveMargin="50">
+
+              Canvas not supported, use another browser.
+          </canvas>
           </div>
           <div style="text-align:center;">
           <button class="btn btn-primary btn-xl js-scrol-trigger rm" id="modi1" onClick="show2();">Modify Wheel</button>

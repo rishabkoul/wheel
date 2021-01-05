@@ -21,6 +21,7 @@
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu" />
 
   <!-- Custom styles for this template -->
   <link href="css/agency.min.css" rel="stylesheet">
@@ -52,140 +53,31 @@
 #canvas {
     z-index: 1;
 display: inline;
-width: 400px;
+width: 600px;
 }
 
-/* #prizePointer {
-    position: absolute;
-    left: 48.4%;
-    top: 10px;
-    z-index: 999;
-} */
+
 .pc{
-  position: inherit;
+  position: relative;
     margin-bottom: -60px;
     z-index: 999;
 }
+.ch{
+  margin: 5px;
 
-@media only screen and (min-width: 350px) and (max-width:375px){
-
-  #canvas {
-      z-index: 1;
-  display: inline;
-  width: 350px;
-  }
-
-  /* #prizePointer {
-  position: absolute;
-  left: 43.4%;
-  top: 10px;
-   z-index: 999;
-  } */
 }
 
-@media only screen and (min-width: 320px) and (max-width:320px){
 
-  #canvas {
-      z-index: 1;
-  display: inline;
-  width: 320px;
+
+  @media only screen and (max-width: 574px) {
+    .sh{
+      display: block !important;
+    }
+    .ch{
+      display: none;
+    }
   }
-
-  /* #prizePointer {
-  position: absolute;
-  left: 42%;
-  top: 5px;
-   z-index: 999;
-  } */
-}
-
-/* @media only screen and (min-width: 375px) and (max-width:400px){
-  #prizePointer {
-  position: absolute;
-  left: 43.4%;
-  top: 10px;
-   z-index: 999;
-  }
-}
-
-@media only screen and (min-width: 568px) and (max-width:568px){
-  #prizePointer {
-  position: absolute;
-  left: 45.5%;
-  top: 10px;
-   z-index: 999;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width:768px){
-  #prizePointer {
-  position: absolute;
-  left: 46.8%;
-  top: 10px;
-   z-index: 999;
-  }
-}
-
-@media only screen and (min-width: 640px) and (max-width:700px){
-  #prizePointer {
-  position: absolute;
-  left: 46%;
-  top: 10px;
-   z-index: 999;
-  }
-}
-
-@media only screen and (min-width: 731px) and (max-width:731px){
-  #prizePointer {
-  position: absolute;
-  left: 46.6%;
-  top: 10px;
-   z-index: 999;
-  }
-}
-
-@media only screen and (min-width: 1024px) and (max-width:1024px){
-  #prizePointer {
-  position: absolute;
-  left: 47.6%;
-  top: 10px;
-   z-index: 999;
-  }
-}
-
-@media only screen and (min-width: 411px) and (max-width:411px){
-  #prizePointer {
-  position: absolute;
-  left: 44.1%;
-  top: 10px;
-   z-index: 999;
-  }
-} */
-
-  /* #canvas {
-      z-index: 1;
-  display: inline;
-  width:100%;
-  } */
-
-
-/* @media only screen and (min-width: 812px) and (max-width: 900px){
-  #prizePointer {
-  position: absolute;
-  left: 47%;
-  top: 10px;
-   z-index: 999;
-  } */
-
-  /* #canvas {
-      z-index: 1;
-  display: inline;
-  width:100%;
-  } */
-
-/* } */
-
-.rbstyle{
+.rbstyl{
   color: #fed136;
   border: none;
   background-color: inherit;
@@ -194,9 +86,12 @@ width: 400px;
   cursor: pointer;
   display: inline-block;
 }
-.rbstyle:focus {outline:0;}
+.rbstyl:focus {outline:0;}
   .black{
     background-color: rgba(0, 0, 0, 0.7);
+  }
+  .black1{
+    background-color: rgba(0, 0, 0, 0.6);
   }
   *, *::after, *::before {
     box-sizing: border-box;
@@ -265,7 +160,12 @@ width: 400px;
     pointer-events: all;
   }
 .color{
-  animation: change 15s infinite;
+  /* animation: change 15s infinite; */
+  background-image: url(img/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
 }
 @keyframes change {
     0%{background-color: #1abc9c;}
@@ -280,6 +180,7 @@ width: 400px;
     90%{background-color: #4381C1;}
     100%{background-color: #A37871;}
 }
+
 
 </style>
 
@@ -296,9 +197,9 @@ width: 400px;
   <div id="overlay1"></div>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="width:100%" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Wheel Decide</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">The Wheel Decide</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -306,7 +207,7 @@ width: 400px;
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#wc2">Wheel</a>
+            <a class="nav-link js-scroll-trigger" href="#canvasContainer">Wheel</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
@@ -318,209 +219,92 @@ width: 400px;
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
-          <button data-modal-target="#modal1" class="rbstyle nav-link js-scroll-trigger">PRIVACY POLICY</button>
+          <button data-modal-target="#modal1" class="rbstyl nav-link js-scroll-trigger">PRIVACY POLICY</button>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Header -->
-  <header class="masthead">
-    <div class="black">
 
-
-    <div class="container">
-      <div class="intro-text">
-        <div class="intro-lead-in">Welcome To Wheel Decide!</div>
-        <div class="intro-heading text-uppercase">Descion Making Is Fun</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">Tell Me More</a>
-      </div>
-    </div>
-    </div>
-  </header>
-
-
-  <!-- Services -->
-  <!-- <section class="page-section" id="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Services</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </div>
-      </div>
-      <div class="row text-center">
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">E-Commerce</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">Responsive Design</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-        </div>
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">Web Security</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Portfolio Grid -->
-  <!-- <section class="bg-light page-section" id="portfolio">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Portfolio</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Threads</h4>
-            <p class="text-muted">Illustration</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Explore</h4>
-            <p class="text-muted">Graphic Design</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Finish</h4>
-            <p class="text-muted">Identity</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Lines</h4>
-            <p class="text-muted">Branding</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Southwest</h4>
-            <p class="text-muted">Website Design</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>Window</h4>
-            <p class="text-muted">Photography</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
   <!-- <div class="page-section"> -->
-  <section class="color" style="padding:10px 0">
-  <section class="page-section" id="wc1" style="display:none; padding-bottom:10px;padding-top:40px;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase" style="color:white;">Add an element to render the wheel.</h2>
-          <!-- <h3 class="section-subheading text-muted">Online tool just for fun.</h3> -->
-        </div>
-      </div>
-      </div>
-      </section>
-      <section class="page-section" id="wc2" style="padding-bottom:10px;padding-top:40px;">
+  <section class="color" style="padding:0">
+    <div class="black">
+      <section class="page-section" id="wc1" style="display:none; padding-bottom:10px;padding-top:120px;">
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center">
-              <h2 class="section-heading text-uppercase" style="color:white;">Wheel</h2>
+              <h2 class="section-heading text-uppercase" style="color:white;">Add an element to render the wheel.</h2>
               <!-- <h3 class="section-subheading text-muted">Online tool just for fun.</h3> -->
             </div>
           </div>
           </div>
-        </section>
+          </section>
+          <!-- <section class="page-section" id="wc2" style="padding-bottom:10px;padding-top:40px;">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2 class="section-heading text-uppercase" style="color:white;">Wheel</h2> -->
+                  <!-- <h3 class="section-subheading text-muted">Online tool just for fun.</h3> -->
+                <!-- </div>
+              </div>
+              </div>
+            </section> -->
 
-        <div id="canvasContainer">
-          <div class="pc">
-            <img id="prizePointer" src="Asset 12.png" height="60" width="" alt="V"/>
-          </div>
-          <canvas id='canvas' width='400' height='400'       data-responsiveMinWidth="180"
-         data-responsiveScaleHeight="true"
-         data-responsiveMargin="50">
+            <div id="canvasContainer" style="padding-top:120px;">
 
-              Canvas not supported, use another browser.
-          </canvas>
-          </div>
-          <div style="text-align:center;">
-          <button class="btn btn-primary btn-xl js-scrol-trigger rm" id="modi1" onClick="show2();">Modify Wheel</button>
-          <p class="text-muted" id="notice" style="display:none; color :white !important;">Click on Segment to Delete it !</p>
-          <p class="text-muted" id="notice1" style="display:block; color :white !important;">Click on Wheel to spin!</p>
-            <input class="form-control rf rm" type="text" name="element" id="element" style="display:none;">
-            <button class="btn btn-primary btn-xl js-scrol-trigger rm" id="addButton" onClick="show1(); addSegment(document.getElementById('element').value); " style="display:none;">Add Segment</button>
-            <button class="btn btn-primary btn-xl js-scrol-trigger rm" id="bigButton" class="bigButton" style="display:none;" onclick="show3();">Save Changes</button>
+              <div class="row">
+                <div class="col-sm-6" style="padding:0;">
+                  <div class="pc" style="width:auto">
+                    <img id="prizePointer" src="Asset 12.png" height="60" width="" alt="V"/>
+                  </div>
+                  <canvas class="col" style="padding:0;" id='canvas' width='600' height='600'       data-responsiveMinWidth="180"
+                 data-responsiveScaleHeight="true"
+                 data-responsiveMargin="50">
 
-          <a style="color:white;" class="rm" href="javascript:void(0);" id="reset1" onclick="theWheel.stopAnimation(false); theWheel.rotationAngle=0; theWheel.draw();">Reset</a>
-          </div>
-        </section>
+                      Canvas not supported, use another browser.
+                  </canvas>
+                </div>
+                <div class="col-sm-6" style="text-align:center;padding:0;">
+                  <!-- List group -->
+    <div class="list-group" style="width:50%;margin:auto;padding:0;" id="myList" role="tablist">
+      <h3 class="section-heading text-uppercase" style="color:white;">Wheel Categories</h3>
+      <button class="btn btn-primary btn-xl js-scrol-trigger sh"  style="color: white; border: 2px solid white; display:none" href="#home" onClick="show4();" role="tab">Show/Hide</button>
+      <button id="b1" class="btn btn-primary btn-xl js-scrol-trigger ch"  style="color: white; " href="#home" onClick="test();" role="tab">Food</button>
+      <button id="b2" class="btn btn-primary btn-xl js-scrol-trigger ch"  style="color: white; " href="#profile" onClick="testm();" role="tab">Movies</button>
+      <button id="b3" class="btn btn-primary btn-xl js-scrol-trigger ch"  style="color: white; " href="#messages" onClick="testmu();" role="tab">Music</button>
+      <button id="b4" class="btn btn-primary btn-xl js-scrol-trigger ch"  style="color: white; "  href="#settings" onClick="testa();" role="tab">Games</button>
+      <button id="b5" class="btn btn-primary btn-xl js-scrol-trigger ch"  style="color: white; "  href="#settings" onClick="testp();" role="tab">Places</button>
+      <button id="b6" class="btn btn-primary btn-xl js-scrol-trigger ch"  style="color: white; "  href="#settings" onClick="testma();" role="tab">Make Your Own Wheel</button>
+    </div>
+
+    <!-- Tab panes -->
+    <!-- <div class="tab-content">
+      <div class="tab-pane active" id="home" role="tabpanel"></div>
+      <div class="tab-pane" id="profile" role="tabpanel"></div>
+      <div class="tab-pane" id="messages" role="tabpanel"></div>
+      <div class="tab-pane" id="settings" role="tabpanel"></div>
+    </div> -->
+
+                </div>
+              </div>
+
+              </div>
+              <div style="text-align:center; padding-top: 80px;">
+              <button class="btn btn-primary btn-xl js-scrol-trigger rm" id="modi1" onClick="show2();">Modify Wheel</button>
+              <p class="text-muted" id="notice" style="display:none; color :white !important;">Click on Segment to Delete it !</p>
+              <p class="text-muted" id="notice1" style="display:block; color :white !important;">Click on Wheel to spin!</p>
+                <input class="form-control rf rm" type="text" name="element" id="element" style="display:none;">
+                <button class="btn btn-primary btn-xl js-scrol-trigger rm" id="addButton" onClick="show1(); addSegment(document.getElementById('element').value); " style="display:none;">Add Segment</button>
+                <button class="btn btn-primary btn-xl js-scrol-trigger rm" id="bigButton" class="bigButton" style="display:none;" onclick="show3();">Save Changes</button>
+                <button class="btn btn-primary btn-xl js-scrol-trigger rm" id="cancelButton" class="bigButton" style="display:none; margin-left:auto;margin-right:auto;"onclick="show5();">Cancel</button>
+
+              <a style="color:white;" class="rm" href="javascript:void(0);" id="reset1" onclick="theWheel.stopAnimation(false); theWheel.rotationAngle=0; theWheel.draw();">Reset</a>
+              </div>
+
+    </div>
+    </section>
+
 
   <!-- </div> -->
 
@@ -592,7 +376,7 @@ width: 400px;
               </div>
             </li>
             <li class="timeline-inverted" >
-              <a class="js-scroll-trigger" href="#wc2"><div class="timeline-image">
+              <a class="js-scroll-trigger" href="#canvasContainer"><div class="timeline-image">
                 <h4>Click
                   <br>here
                   <br>To Spin!</h4>
@@ -604,126 +388,7 @@ width: 400px;
     </div>
   </section>
 
-  <!-- Team -->
-  <!-- <section class="bg-light page-section" id="team">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-            <h4>Kay Garland</h4>
-            <p class="text-muted">Lead Designer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-            <h4>Larry Parker</h4>
-            <p class="text-muted">Lead Marketer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-            <h4>Diana Pertersen</h4>
-            <p class="text-muted">Lead Developer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-        </div>
-      </div>
-    </div>
-  </section> -->
 
-
-
-  <!-- Clients -->
-  <!-- <section class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
-  </section> -->
 
   <!-- Contact -->
   <section class="page-section" id="contact">
@@ -798,7 +463,7 @@ width: 400px;
           <ul class="list-inline quicklinks">
             <li class="list-inline-item">
               <!-- <a href="">Privacy Policy</a> -->
-              <button data-modal-target="#modal1" class="rbstyle">Privacy Policy</button>
+              <button data-modal-target="#modal1" class="rbstyl">Privacy Policy</button>
 
             </li>
             <!-- <li class="list-inline-item">
@@ -1071,25 +736,29 @@ width: 400px;
   <script>
   document.getElementById("reset1").style.display = "none";
   document.getElementById("reset1").style.display = "block";
+  var colors1=['red','white','yellow','white','blue','white','green','white'];
     var colors=['#fed136','#5BBF42','#41CEDB','#e7706f','#8787F2','#4381C1','#BEA2C2','#A37871','#4E4B5C','#DD1313','orange','yellow','green','blue','indigo','violet'];
     let theWheel = new Winwheel({
-        'numSegments'    : 7,
-        'lineWidth'   : 4,
+        'numSegments'    : 10,
+        'lineWidth'   : 0,
         'textFillStyle' : '#ffffff',
-        'textFontFamily' : 'Roboto Slab',
-        'strokeStyle' : '#ffffff',
+        'textFontFamily' : 'Comic Sans MS',
+        'strokeStyle' : null,
         'innerRadius'   : 35,
         'segments'     :        //    use pointerGuide to help.
   [
-     {'fillStyle' : 'violet', 'text' : 'Segment 1'},
-     {'fillStyle' : 'indigo', 'text' : 'Segment 2'},
-     {'fillStyle' : 'blue', 'text' : 'Segment 3'},
-     {'fillStyle' : 'green', 'text' : 'Segment 4'},
-     {'fillStyle' : 'yellow', 'text' : 'Segment 5'},
-     {'fillStyle' : 'orange', 'text' : 'Segment 6'},
-     {'fillStyle' : 'red', 'text' : 'Segment 7'}
+     {'fillStyle' : 'violet', 'text' : 'Musicals/ Dance'},
+     {'fillStyle' : 'indigo', 'text' : 'Horror'},
+     {'fillStyle' : 'blue', 'text' : 'Crime/ Gangster'},
+     {'fillStyle' : 'green', 'text' : 'Romantic Comedy'},
+     {'fillStyle' : 'yellow', 'text' : 'Drama'},
+     {'fillStyle' : 'orange', 'text' : 'Epics/ Historical'},
+     {'fillStyle' : 'red', 'text' : 'Science fiction'},
+     {'fillStyle' : '#41CEDB', 'text' : 'Fantasy'},
+     {'fillStyle' : '#8787F2', 'text' : 'Animation'},
+     {'fillStyle' : '#A37871', 'text' : 'Action Adventure'},
   ],
-        'outerRadius'    : 170,
+        'outerRadius'    : 270,
         'responsive'   : true,
         'animation' :
   {
@@ -1142,30 +811,12 @@ width: 400px;
   let winningSegment = theWheel.getIndicatedSegment();
 
   // Basic alert of the segment text which is the prize name.
-  alert("You have won " + winningSegment.text + "!");
+  alert("You can choose " + winningSegment.text + "!");
   document.getElementById("reset1").click();
   }
 
 
-  // Function to draw pointer using code (like in a previous tutorial).
-  // drawTriangle();
-  //
-  // function drawTriangle()
-  // {
-  //   // Get the canvas context the wheel uses.
-  //     let ctx = theWheel.ctx;
-  //
-  //     ctx.strokeStyle = 'navy';     // Set line colour.
-  //     ctx.fillStyle   = 'aqua';     // Set fill colour.
-  //     ctx.lineWidth   = 2;
-  //     ctx.beginPath();              // Begin path.
-  //     ctx.moveTo(170, 5);           // Move to initial position.
-  //     ctx.lineTo(230, 5);           // Draw lines to make the shape.
-  //     ctx.lineTo(200, 40);
-  //     ctx.lineTo(171, 5);
-  //     ctx.stroke();                 // Complete the path by stroking (draw lines).
-  //     ctx.fill();                   // Then fill.
-  // }
+
 
     function addSegment(element)
     {
@@ -1180,7 +831,7 @@ width: 400px;
       // The draw method of the wheel object must be called in order for the changes
         // to be rendered.
         document.getElementById("wc1").style.display = "none";
-         document.getElementById("wc2").style.display = "block";
+         // document.getElementById("wc2").style.display = "block";
         theWheel.draw();
         document.getElementById("element").value=null;
       }
@@ -1205,7 +856,7 @@ width: 400px;
        }
        else {
           document.getElementById("wc1").style.display = "block";
-           document.getElementById("wc2").style.display = "none";
+           // document.getElementById("wc2").style.display = "none";
            document.getElementById("canvasContainer").style.display = "none";
            theWheel.numSegments=0;
        }
@@ -1222,6 +873,138 @@ width: 400px;
 
     }
 
+
+  function test()
+  {
+    while(theWheel.numSegments!=9)
+    {
+      if(theWheel.numSegments>9){
+        theWheel.deleteSegment();
+      }
+      else {
+        theWheel.addSegment({
+            'text' : '',
+            'fillStyle' : colors[Math.floor(Math.random() * 16)],
+        }, 1);
+      }
+    }
+    theWheel.segments[1].text = 'Sandwiches';
+    theWheel.segments[2].text = 'Burger';
+    theWheel.segments[3].text = 'Korean';
+    theWheel.segments[4].text = 'Japenese';
+    theWheel.segments[5].text = 'Chinese';
+    theWheel.segments[6].text = 'Pizza';
+    theWheel.segments[7].text = 'Seafood';
+    theWheel.segments[8].text = 'Indian';
+    theWheel.segments[9].text = 'French';
+    theWheel.draw();
+  }
+
+  function testm()
+  {
+    while(theWheel.numSegments!=10)
+    {
+      if(theWheel.numSegments>10){
+        theWheel.deleteSegment();
+      }
+      else {
+        theWheel.addSegment({
+            'text' : '',
+            'fillStyle' : colors[Math.floor(Math.random() * 16)],
+        }, 1);
+      }
+    }
+    theWheel.segments[1].text = 'Musicals/ Dance';
+    theWheel.segments[2].text = 'Horror';
+    theWheel.segments[3].text = 'Crime/ Gangster';
+    theWheel.segments[4].text = 'Romantic Comedy';
+    theWheel.segments[5].text = 'Drama';
+    theWheel.segments[6].text = 'Fantasy';
+    theWheel.segments[7].text = 'Animation';
+    theWheel.segments[8].text = 'Epics/ Historical';
+    theWheel.segments[9].text = 'Science fiction';
+    theWheel.segments[10].text = 'Action Adventure';
+    theWheel.draw();
+  }
+  function testp()
+  {
+    while(theWheel.numSegments!=10)
+    {
+      if(theWheel.numSegments>10){
+        theWheel.deleteSegment();
+      }
+      else {
+        theWheel.addSegment({
+            'text' : '',
+            'fillStyle' : colors[Math.floor(Math.random() * 16)],
+        }, 1);
+      }
+    }
+    theWheel.segments[1].text = 'San Diego';
+    theWheel.segments[2].text = 'Miami';
+    theWheel.segments[3].text = 'Bahamas';
+    theWheel.segments[4].text = 'Beijing';
+    theWheel.segments[5].text = 'Las Vegas';
+    theWheel.segments[6].text = 'Los Angeles';
+    theWheel.segments[7].text = 'Tel Aviv';
+    theWheel.segments[8].text = 'London';
+    theWheel.segments[9].text = 'Paris';
+    theWheel.segments[10].text = 'Barcelona';
+    theWheel.draw();
+  }
+  function testa()
+  {
+    while(theWheel.numSegments!=11)
+    {
+      if(theWheel.numSegments>11){
+        theWheel.deleteSegment();
+      }
+      else {
+        theWheel.addSegment({
+            'text' : '',
+            'fillStyle' : colors[Math.floor(Math.random() * 16)],
+        }, 1);
+      }
+    }
+    theWheel.segments[1].text = 'Old School';
+    theWheel.segments[2].text = 'Arcade';
+    theWheel.segments[3].text = 'Adventure';
+    theWheel.segments[4].text = 'Action';
+    theWheel.segments[5].text = 'Shooter';
+    theWheel.segments[6].text = 'Role Playing';
+    theWheel.segments[7].text = 'Sports';
+    theWheel.segments[8].text = 'Racing';
+    theWheel.segments[9].text = 'Fighting';
+    theWheel.segments[10].text = 'Platform';
+    theWheel.segments[11].text = 'Simulation';
+    theWheel.draw();
+  }
+  function testmu()
+  {
+    while(theWheel.numSegments!=10)
+    {
+      if(theWheel.numSegments>10){
+        theWheel.deleteSegment();
+      }
+      else {
+        theWheel.addSegment({
+            'text' : '',
+            'fillStyle' : colors[Math.floor(Math.random() * 16)],
+        }, 1);
+      }
+    }
+    theWheel.segments[1].text = 'Pop';
+    theWheel.segments[2].text = 'Hip-Hop';
+    theWheel.segments[3].text = 'Country';
+    theWheel.segments[4].text = 'Western Classical';
+    theWheel.segments[5].text = 'Rock';
+    theWheel.segments[6].text = 'Jazz';
+    theWheel.segments[7].text = 'Blues';
+    theWheel.segments[8].text = 'Electronic';
+    theWheel.segments[9].text = 'Latino';
+    theWheel.segments[10].text = 'Oriental Pop';
+    theWheel.draw();
+  }
     function show2()
     {
       document.getElementById("element").style.display = "block";
@@ -1230,6 +1013,7 @@ width: 400px;
       document.getElementById("reset1").style.display = "none";
       document.getElementById("modi1").style.display = "none";
       document.getElementById("bigButton").style.display = "block";
+      document.getElementById("cancelButton").style.display = "block";
       document.getElementById("element").style.marginLeft = "auto";
       document.getElementById("addButton").style.marginLeft = "auto";
       document.getElementById("bigButton").style.marginLeft = "auto";
@@ -1254,9 +1038,65 @@ width: 400px;
       document.getElementById("modi1").style.marginRight = "auto";
       document.getElementById("notice1").style.display = "block";
       document.getElementById("notice").style.display = "none";
+      document.getElementById("cancelButton").style.display = "none";
+      document.getElementById("wc1").style.display = "none";
 
       theWheel.flag=0;
     }
+    function show4() {
+      if(document.getElementById("b1").style.display==='none')
+      {
+        document.getElementById("b1").style.display = "block";
+        document.getElementById("b2").style.display = "block";
+        document.getElementById("b3").style.display = "block";
+        document.getElementById("b4").style.display = "block";
+        document.getElementById("b5").style.display = "block";
+        document.getElementById("b6").style.display = "block";
+      }else {
+        document.getElementById("b1").style.display = "none";
+        document.getElementById("b2").style.display = "none";
+        document.getElementById("b3").style.display = "none";
+        document.getElementById("b4").style.display = "none";
+        document.getElementById("b5").style.display = "none";
+        document.getElementById("b6").style.display = "none";
+      }
+
+    }
+
+function show5(){
+  document.getElementById("modi1").style.display = "block";
+  document.getElementById("reset1").style.display = "block";
+  document.getElementById("addButton").style.display = "none";
+  document.getElementById("bigButton").style.display = "none";
+  document.getElementById("element").style.display = "none";
+  document.getElementById("modi1").style.marginLeft = "auto";
+  document.getElementById("modi1").style.marginRight = "auto";
+  document.getElementById("notice1").style.display = "block";
+  document.getElementById("notice").style.display = "none";
+  document.getElementById("cancelButton").style.display = "none";
+  document.getElementById("wc1").style.display = "none";
+
+  theWheel.flag=0;
+
+  testm();
+  theWheel.draw();
+  document.getElementById("canvasContainer").style.display = "block";
+}
+
+  function testma()
+  {
+
+    for(i=1;i<=theWheel.numSegments;i++)
+    {
+      theWheel.deleteSegment();
+    }
+
+     show2();
+     document.getElementById("wc1").style.display = "block";
+      // document.getElementById("wc2").style.display = "none";
+      document.getElementById("canvasContainer").style.display = "none";
+      theWheel.numSegments=0;
+  }
   </script>
   <script>
 var input = document.getElementById("element");
@@ -1267,15 +1107,7 @@ input.addEventListener("keyup", function(event) {
     }
 });
 </script>
-  <!-- <script>
-           (function () {
-               let l=(736*(window.innerWidth/screen.availWidth));
-               document.getElementById("prizePointer").style.left = l + "px";
-               //document.getElementById("canvasContainer").style.width =document.getElementById("canvas").style.width;
-               // document.getElementById("spin").style.width = setWindowSize + "px";
-               // document.getElementById("spin").style.height = setWindowSize + "px";
-           })();
-       </script> -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 <script>
       function myFunction() {
